@@ -1,1 +1,386 @@
-{}
+{
+  "site": {
+    "name": "Scroll A Game Wiki",
+    "shortName": "Scroll A Game",
+    "tagline": "Guías, Objetos y Jugabilidad",
+    "description": "Wiki completa de Scroll A Game con guías detalladas, consejos de juego, información de objetos, estrategias de progresión y actualizaciones para dominar la aventura.",
+    "legalNotice": "Wiki no oficial de fans. Hecha por jugadores, para jugadores."
+  },
+  "nav": {
+    "guide": "Guía",
+    "mechanics": "Mecánicas",
+    "controls": "Controles",
+    "progression": "Progresión",
+    "items": "Objetos",
+    "community": "Comunidad",
+    "characters": "Personajes"
+  },
+  "home": {
+    "meta": {
+      "title": "Scroll a Game Wiki — Guías, Objetos, Mejoras y Códigos",
+      "description": "Guía completa de Scroll a Game que cubre progresión para principiantes, pergaminos, objetos, controles, actualizaciones y estrategias para conquistar cada hito."
+    },
+    "hero": {
+      "eyebrow": "Juego de Aventura Basado en Desplazamiento",
+      "title": "Scroll A Game Wiki",
+      "description": "Una wiki completa de Scroll A Game que incluye guías de juego, mecánicas, consejos de progresión, personajes, objetos y todo lo que los jugadores necesitan para explorar el mundo del juego.",
+      "stats": [
+        "Visitas Totales: 10K+",
+        "Contenido: Guías y Objetos",
+        "Códigos Activos: Verificados",
+        "Actualizaciones Diarias: Activas"
+      ],
+      "primaryCta": "Guía para Principiantes",
+      "secondaryCta": "Catálogo de Objetos",
+      "tertiaryCta": "Códigos Activos",
+      "videoLabel": "Medios oficiales"
+    },
+    "updates": {
+      "title": "Últimas Actualizaciones",
+      "browse": "Explorar Todas las Guías",
+      "viewAll": "Ver Todo"
+    },
+    "start": {
+      "eyebrow": "Comienza Aquí",
+      "title": "Tu Viaje en Scroll a Game",
+      "cards": [
+        {
+          "number": "1",
+          "title": "Guía para Principiantes",
+          "description": "Domina la dinámica central de movimiento, comprende los límites de hitbox y evita errores comunes durante tus primeras partidas de desplazamiento."
+        },
+        {
+          "number": "2",
+          "title": "Progresión Más Rápida",
+          "description": "Optimiza el impulso cinético y prioriza mejoras iniciales clave para escalar hitos eficientemente sin estancarte."
+        },
+        {
+          "number": "3",
+          "title": "Pergaminos y Equipamiento",
+          "description": "Descubre rarezas de pergaminos, reliquias ofensivas y equipo potenciador de estadísticas para crear sinergias poderosas en fases difíciles."
+        },
+        {
+          "number": "4",
+          "title": "Controles y Asignaciones",
+          "description": "Ajusta la sensibilidad del teclado, ratón y mando para minimizar la latencia de entrada y dominar secuencias complejas de plataformas."
+        }
+      ]
+    },
+    "popular": {
+      "eyebrow": "Páginas Populares",
+      "title": "Tendencias Actuales",
+      "quickLinks": [
+        "Guía para Principiantes",
+        "Objetos de Pergamino",
+        "Mejoras de Velocidad",
+        "Distribución de Controles"
+      ]
+    },
+    "aboutGame": {
+      "title": "¿Qué es Scroll a Game?",
+      "paragraphs": [
+        "Scroll a Game es un juego de aventura y progresión de desplazamiento de ritmo rápido donde convergen los reflejos del jugador, el impulso de movimiento y las rutas estratégicas de mejora. Recorre entornos de desplazamiento dinámico llenos de obstáculos peligrosos, descubre pergaminos raros y desbloquea potentes multiplicadores de habilidades en diversos niveles.",
+        "Ya sea que estés perfeccionando los tiempos de salto, desbloqueando pergaminos legendarios de alto nivel o avanzando en los hitos de prestigio, nuestra wiki comunitaria ofrece guías verificadas, desgloses de objetos y rutas óptimas de progresión."
+      ],
+      "stats": [
+        {
+          "label": "Plataforma",
+          "value": "PC y Móvil"
+        },
+        {
+          "label": "Género",
+          "value": "Aventura de Desplazamiento"
+        },
+        {
+          "label": "Niveles de Objetos",
+          "value": "6 Niveles de Rareza"
+        },
+        {
+          "label": "Comunidad",
+          "value": "Hub de Wiki Activo"
+        }
+      ],
+      "cta": "Explorar Todas las Guías"
+    },
+    "explore": {
+      "title": "Explora Scroll a Game Wiki",
+      "description": "Domina las mecánicas, optimiza tus combinaciones de mejoras, consulta códigos promocionales activos y sube en las clasificaciones con completas guías de la comunidad.",
+      "modules": [
+        {
+          "order": 1,
+          "name": "Guía para Principiantes de Scroll a Game",
+          "description": "Una guía inicial que cubre reglas básicas, impulso de movimiento, conciencia de cámara y primeros pasos recomendados para nuevos jugadores.",
+          "href": "/guide/scroll-a-game-beginner-guide",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "Aprende los límites del hitbox y mantén la regla de posicionamiento a un tercio de la pantalla"
+            },
+            {
+              "label": "2",
+              "detail": "Prioriza mejoras tempranas de supervivencia para ampliar el margen de error en fases desconocidas"
+            },
+            {
+              "label": "3",
+              "detail": "Domina el almacenamiento de comandos y la cancelación de impulso para evitar derrapes hacia peligros"
+            },
+            {
+              "label": "4",
+              "detail": "Desbloquea recompensas tempranas de hitos para establecer una progresión compuesta constante"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "Códigos de Scroll a Game",
+          "description": "Códigos de canje activos, regalos y bonificaciones promocionales lanzadas para ayudar a acelerar el progreso inicial.",
+          "href": "/progression/scroll-a-game-rewards",
+          "displayType": "code-cards",
+          "highlights": [
+            {
+              "label": "SCROLL2026",
+              "detail": "Canjea por pergaminos iniciales gratuitos y bonificación de moneda",
+              "badge": "Activo"
+            },
+            {
+              "label": "VELOCITY",
+              "detail": "Reclama impulso exclusivo de velocidad y un catalizador raro de mejora",
+              "badge": "Activo"
+            },
+            {
+              "label": "MILESTONE10K",
+              "detail": "Recompensa de la comunidad con fichas de reinicio y pociones de utilidad",
+              "badge": "Activo"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "Actualizaciones de Scroll a Game",
+          "description": "Registro de cambios de versiones, reequilibrios de pergaminos, eventos de temporada y notas oficiales del parche de los desarrolladores.",
+          "href": "/community/scroll-a-game-updates",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Parche 1.4",
+              "detail": "Ajuste dinámico de la velocidad de desplazamiento y dos nuevas fases de desafíos"
+            },
+            {
+              "label": "Equilibrio de Objetos",
+              "detail": "Mejora del multiplicador de pergaminos legendarios y coste de mejora reducido"
+            },
+            {
+              "label": "Evento",
+              "detail": "Desafíos de velocidad de temporada con aspectos cosméticos y títulos exclusivos"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "name": "Guía de Jugabilidad de Scroll a Game",
+          "description": "Análisis exhaustivo del cálculo de velocidad cinemática, interacción de obstáculos y técnicas avanzadas de navegación de fases.",
+          "href": "/mechanics/scroll-a-game-gameplay",
+          "displayType": "accordion",
+          "highlights": [
+            {
+              "label": "Física Cinética",
+              "detail": "El impulso acumulado aumenta la velocidad máxima pero reduce la maniobrabilidad de giro"
+            },
+            {
+              "label": "Amortiguación de Salto",
+              "detail": "Registra comandos de entrada hasta 120 ms antes del aterrizaje para saltos sin pérdida de velocidad"
+            },
+            {
+              "label": "Caja de Colisión",
+              "detail": "Los límites exactos de impacto son un 15% menores que las siluetas visuales externas"
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "name": "Consejos y Trucos de Scroll a Game",
+          "description": "Estrategias de jugadores experimentados para sortear trampas difíciles, conservar multiplicadores de racha y optimizar monedas.",
+          "href": "/guide/scroll-a-game-tips-and-tricks",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Posición",
+              "detail": "Permanece cerca del tercio central delantero en lugar del borde trasero para maximizar el tiempo de reacción"
+            },
+            {
+              "label": "Hitbox",
+              "detail": "Enfoca la esquiva en el torso del personaje en lugar de las extremidades exteriores"
+            },
+            {
+              "label": "Ritmo",
+              "detail": "Evita pulsar botones compulsivamente; mantén una cadencia regular para preservar la acumulación de impulso"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "name": "Secretos de Scroll a Game",
+          "description": "Hitos ocultos, activadores de desplazamiento inverso, anomalías interactivas del entorno y multiplicadores secretos de prestigio.",
+          "href": "/progression/scroll-a-game-secrets",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "Alcanza hitos de distancia cinética para activar menús ocultos de utilidad e indicios rúnicos"
+            },
+            {
+              "label": "2",
+              "detail": "Ejecuta comandos de retroceso en transiciones de fase visual para descubrir marcas secretas"
+            },
+            {
+              "label": "3",
+              "detail": "Mantén posiciones fijas frente a barreras móviles para obtener insignias cosméticas permanentes"
+            },
+            {
+              "label": "4",
+              "detail": "Desbloquea el estrato de prestigio Umbral Cero para obtener multiplicadores compuestos entre reinicios"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "Controles de Scroll a Game",
+          "description": "Referencia completa de atajos de teclado, ratón y mando para eliminar la latencia de entrada y ajustar la respuesta al milímetro.",
+          "href": "/controls/scroll-a-game-controls",
+          "displayType": "code-cards",
+          "highlights": [
+            {
+              "label": "WASD / Espacio",
+              "detail": "Navegación primaria en 4 direcciones, saltos de elevación y propulsión vertical"
+            },
+            {
+              "label": "Shift / Clic Derecho",
+              "detail": "Impulso de carrera horizontal para salvar huecos y zonas limítrofes peligrosas"
+            },
+            {
+              "label": "Clic Izquierdo / F",
+              "detail": "Ataque principal o activación de interacción ambiental para despejar senderos"
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "Comunidad de Scroll a Game",
+          "description": "Únete al Discord oficial de la comunidad y a los canales de debate para anuncios en tiempo real, parches y guías.",
+          "href": "/community/scroll-a-game-discord",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Discord",
+              "detail": "Servidor oficial con anuncios en tiempo real, notas de parches y charlas con desarrolladores"
+            },
+            {
+              "label": "Estrategia",
+              "detail": "Foros organizados por jugadores para configuraciones de hardware y optimización de builds"
+            },
+            {
+              "label": "Eventos",
+              "detail": "Desafíos comunitarios de temporada, muestras de clasificaciones y concursos"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "description": "Respuestas rápidas a las preguntas más habituales sobre Scroll a Game.",
+      "items": [
+        {
+          "question": "¿Qué es Scroll a Game?",
+          "answer": "Scroll a Game es un título de aventura de desplazamiento con mecánicas dinámicas de cámara, navegación de obstáculos, pergaminos coleccionables y profundos árboles de progresión. Los jugadores recorren fases peligrosas, mejoran atributos cinéticos y desbloquean poderosas sinergias de equipo."
+        },
+        {
+          "question": "¿Cómo empiezo como principiante en Scroll a Game?",
+          "answer": "Empieza consultando la guía para principiantes de Scroll a Game para familiarizarte con el posicionamiento en pantalla y los controles esenciales de movimiento. Invierte tu moneda inicial en mejoras básicas de supervivencia y radio de recolección antes de apostar por multiplicadores ofensivos avanzados."
+        },
+        {
+          "question": "¿Cómo funcionan los pergaminos y sus rarezas en Scroll a Game?",
+          "answer": "Los pergaminos en Scroll a Game abarcan varios niveles de rareza, desde Común hasta Mítico. Equipar pergaminos complementarios potencia el daño ofensivo, crea barreras defensivas y optimiza la tasa pasiva de generación de recursos."
+        },
+        {
+          "question": "¿Dónde encuentro códigos activos y recompensas para Scroll a Game?",
+          "answer": "Consulta nuestros centros de recompensas y comunidad de Scroll a Game para enterarte de los últimos códigos promocionales activos, hitos desbloqueados y bonificaciones de temporada."
+        },
+        {
+          "question": "¿Cómo puedo optimizar los controles y reducir la latencia de entrada en Scroll a Game?",
+          "answer": "Visita la guía de controles de Scroll a Game para conocer las asignaciones recomendadas de teclado, esquemas de mando y sensibilidad del ratón diseñadas para una precisión fluida en plataformas."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "¿Listo para Dominar Scroll A Game?",
+      "description": "Desde tus primeros pasos en el mundo de aventura hasta superar los desafíos más avanzados, nuestra wiki comunitaria te acompaña con guías gratuitas y actualizadas.",
+      "primary": "Leer la Guía para Principiantes",
+      "secondary": "Jugar Ahora"
+    }
+  },
+  "shared": {
+    "wikiNavigation": "Navegación de la Wiki",
+    "activeCodes": "Códigos Activos",
+    "updated": "Actualizado",
+    "viewAllCodes": "Ver todos los códigos",
+    "playOnRoblox": "Jugar en Roblox",
+    "inThisSection": "En esta sección",
+    "tableOfContents": "Tabla de Contenidos",
+    "nextSteps": "Siguientes Pasos",
+    "needHelp": "¿Necesitas Ayuda?",
+    "relatedReading": "Lecturas Relacionadas",
+    "relatedGuides": "Guías Relacionadas",
+    "readMore": "Leer más",
+    "officialMedia": "Medios oficiales",
+    "home": "Inicio",
+    "noGuidesAvailable": "Aún no hay guías disponibles. ¡Vuelve pronto!"
+  },
+  "footer": {
+    "aboutTitle": "Scroll A Game Wiki",
+    "about": "Scroll A Game Wiki es un centro de guías independiente creado por la comunidad que cubre jugabilidad, mecánicas, consejos de progresión, objetos y conocimientos esenciales para principiantes y veteranos.",
+    "quickLinks": "Enlaces Rápidos",
+    "guides": "Guías",
+    "legal": "Legal",
+    "copyright": "2026 Scroll A Game Wiki. Wiki independiente de fans de la comunidad.",
+    "description": "Guías completas de aventura, objetos, estrategias de progresión y actualizaciones de Scroll A Game.",
+    "playGame": "Jugar a Scroll A Game",
+    "officialDiscord": "Discord Oficial",
+    "officialYoutube": "YouTube Oficial",
+    "beginnerGuide": "Guía para Principiantes",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio",
+    "mechanicsGuides": "Guías de Mecánicas",
+    "controlsGuides": "Guías de Controles",
+    "progressionGuides": "Guías de Progresión"
+  },
+  "guide": {
+    "overviewTitle": "Guía de Scroll a Game",
+    "overviewDescription": "Tutoriales completos para principiantes, fundamentos de juego y estrategias esenciales para dominar Scroll a Game."
+  },
+  "mechanics": {
+    "overviewTitle": "Mecánicas de Scroll a Game",
+    "overviewDescription": "Desglose exhaustivo de la física de desplazamiento, escalado de velocidad, peligros de fase y reglas del sistema."
+  },
+  "controls": {
+    "overviewTitle": "Controles de Scroll a Game",
+    "overviewDescription": "Esquemas completos de control para teclado, ratón y móvil, configuraciones de entrada y ajustes recomendados."
+  },
+  "progression": {
+    "overviewTitle": "Progresión de Scroll a Game",
+    "overviewDescription": "Objetivos de misiones, hitos de desbloqueo, consejos para descubrir secretos y progresión de recompensas."
+  },
+  "items": {
+    "overviewTitle": "Objetos de Scroll a Game",
+    "overviewDescription": "Catálogo de pergaminos antiguos, armas, consumibles de utilidad y niveles de mejoras cinéticas."
+  },
+  "community": {
+    "overviewTitle": "Comunidad de Scroll a Game",
+    "overviewDescription": "Registros oficiales de actualizaciones, servidores comunitarios de Discord, debates en foros y detalles de lanzamientos."
+  },
+  "characters": {
+    "overviewTitle": "Personajes de Scroll a Game",
+    "overviewDescription": "Estadísticas de personajes jugables, aspectos cosméticos, perfiles de enemigos y tácticas frente a jefes de fase."
+  }
+}
