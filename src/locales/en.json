@@ -9,8 +9,8 @@
   "nav": {},
   "home": {
     "meta": {
-      "title": "My Seafood Stand Wiki — Codes, Recipes, Upgrades & Guides",
-      "description": "Complete My Seafood Stand guide on Roblox with active working codes, all fish & recipes, best upgrades tier list, and fast cash tips."
+      "title": "Scroll a Game Wiki — Guides, Items, Upgrades & Codes",
+      "description": "Complete Scroll a Game guide covering beginner progression, scrolls, items, controls, updates, and strategies to conquer every milestone."
     },
     "hero": {
       "eyebrow": "Adventure Scroll-Based Game",
@@ -34,27 +34,27 @@
     },
     "start": {
       "eyebrow": "Start Here",
-      "title": "Your My Seafood Stand Journey",
+      "title": "Your Scroll a Game Journey",
       "cards": [
         {
           "number": "1",
           "title": "Beginner Guide",
-          "description": "Master the Spirit World from day one with our comprehensive beginner guide covering controls, combat, and early progression."
+          "description": "Master core movement dynamics, understand hitbox boundaries, and avoid rookie mistakes during your first scrolling runs."
         },
         {
           "number": "2",
-          "title": "Fastest Leveling",
-          "description": "Dominate early game and max your progression with the most efficient leveling routes and strategies."
+          "title": "Fastest Progression",
+          "description": "Optimize kinetic momentum and prioritize essential early upgrades to scale your milestones efficiently without grinding walls."
         },
         {
           "number": "3",
-          "title": "Best Farming Spots",
-          "description": "Maximize your Soul Essence and EXP gains with optimal farming locations for every stage."
+          "title": "Scroll Items & Gear",
+          "description": "Discover scroll rarities, offensive relics, and stat-boosting equipment to craft powerful synergies for difficult stages."
         },
         {
           "number": "4",
-          "title": "How to Extract",
-          "description": "Learn the best methods and locations for extracting resources in My Seafood Stand."
+          "title": "Controls & Keybinds",
+          "description": "Fine-tune keyboard, mouse, and gamepad sensitivity to minimize input latency and master tight platforming sequences."
         }
       ]
     },
@@ -62,237 +62,222 @@
       "eyebrow": "Popular Pages",
       "title": "Trending Now",
       "quickLinks": [
-        "Hollow Progression",
-        "Fastest Leveling",
-        "Spirit Charms",
-        "All Boss Guides"
-      ],
-      "cards": [
-        {
-          "badge": "Beginner",
-          "title": "Beginner Guide",
-          "description": "Everything you need from your first login to mastering the basics of combat and progression.",
-          "href": "/beginner-guide"
-        },
-        {
-          "badge": "Updated",
-          "title": "Active Codes",
-          "description": "All working codes with rewards redeem before they expire.",
-          "href": "/codes"
-        },
-        {
-          "badge": "Updated",
-          "title": "Equipment Database",
-          "description": "94 items across 5 slots complete gear database with stats, rarity, and sources.",
-          "href": "/equipment"
-        },
-        {
-          "badge": "Popular",
-          "title": "Which Race Should You Pick?",
-          "description": "Shinigami, Quincy, or Hollow compare all three and find your perfect playstyle.",
-          "href": "/races/best-race"
-        },
-        {
-          "badge": "New",
-          "title": "Enemies & Monsters",
-          "description": "23 enemy types across 5 regions drops, locations, and farming tips.",
-          "href": "/enemies"
-        },
-        {
-          "badge": "Popular",
-          "title": "Boss Locations & Drops",
-          "description": "Every boss location, drop table, and respawn timer in one reference.",
-          "href": "/boss-locations-drops-respawn-times"
-        },
-        {
-          "badge": "Popular",
-          "title": "Best Builds",
-          "description": "Optimal stat allocation, skill tree picks, and Charm combos for every playstyle.",
-          "href": "/builds/best-builds"
-        },
-        {
-          "badge": "New",
-          "title": "Shikai Tier List",
-          "description": "All 6 Shinigami Shikai types ranked by PvP and PvE performance.",
-          "href": "/tier-list/shikai"
-        },
-        {
-          "badge": "New",
-          "title": "World Events Guide",
-          "description": "Supply Caches, Raids, and endgame world events with rare rewards.",
-          "href": "/world-events"
-        }
+        "Beginner Guide",
+        "Scroll Items",
+        "Speed Upgrades",
+        "Controls Layout"
       ]
     },
     "aboutGame": {
-      "title": "What is My Seafood Stand?",
+      "title": "What is Scroll a Game?",
       "paragraphs": [
-        "My Seafood Stand is a stylized fighting RPG on Roblox inspired by the Bleach anime universe. Choose from three playable races Shinigami, Quincy, or Hollow each with unique progression systems, unlockable abilities, and evolution paths. Master over 130 skills as you fight your way to the level 100 cap.",
-        "Whether you're unlocking your first Shikai, evolving from a base Hollow into an Arrancar, or grinding Quincy Lieutenant missions, our wiki covers every system with detailed guides, data tables, and step-by-step walkthroughs."
+        "Scroll a Game is a fast-paced scrolling adventure and progression game where player reflexes, movement momentum, and strategic upgrade paths collide. Traverse dynamic scrolling environments filled with tricky hazards, discover rare scrolls, and unlock powerful ability multipliers across diverse levels.",
+        "Whether you are refining your jump buffer timings, unlocking high-tier legendary scrolls, or pushing deep into prestige milestones, our community wiki provides verified guides, item breakdowns, and optimal progression routes."
       ],
       "stats": [
         {
-          "label": "Developer",
-          "value": "Midnight Continent"
-        },
-        {
           "label": "Platform",
-          "value": "Roblox"
+          "value": "PC & Mobile"
         },
         {
           "label": "Genre",
-          "value": "Fighting RPG"
+          "value": "Scrolling Adventure"
         },
         {
-          "label": "Visits",
-          "value": "12.6M+"
+          "label": "Item Tiers",
+          "value": "6 Rarity Tiers"
         },
         {
-          "label": "Favorites",
-          "value": "243K+"
-        },
-        {
-          "label": "Total Skills",
-          "value": "130+"
-        },
-        {
-          "label": "Level Cap",
-          "value": "100"
+          "label": "Community",
+          "value": "Active Wiki Hub"
         }
       ],
       "cta": "Explore All Guides"
     },
     "explore": {
-      "title": "Explore My Seafood Stand Wiki",
-      "description": "Master your seafood restaurant on Roblox with essential progression guides, active codes, complete fish & recipe catalogs, and optimal upgrade strategies.",
+      "title": "Explore Scroll a Game Wiki",
+      "description": "Master mechanics, optimize your upgrade builds, check active promo codes, and climb the leaderboards with comprehensive community guides.",
       "modules": [
         {
           "order": 1,
-          "name": "My Seafood Stand Working Codes",
-          "description": "Redeem the latest working codes to claim free coins, gems, exclusive cosmetics, and boost items before they expire.",
-          "href": "/codes/my-seafood-stand-codes",
-          "displayType": "code-box",
+          "name": "Scroll a Game Beginner Guide",
+          "description": "A starter guide covering basic rules, movement momentum, camera awareness, and recommended first steps for new players.",
+          "href": "/guide/scroll-a-game-beginner-guide",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "Code",
-              "detail": "FULLRELEASE — Free Cash & Rewards"
+              "label": "1",
+              "detail": "Learn hitbox boundaries and maintain the one-third screen positioning rule"
             },
             {
-              "label": "Code",
-              "detail": "75KLIKES — Exclusive Ability Reroll"
+              "label": "2",
+              "detail": "Prioritize early survival upgrades to expand room for error on unfamiliar stages"
             },
             {
-              "label": "Tip",
-              "detail": "Codes are case-sensitive; enter them in the Settings menu"
+              "label": "3",
+              "detail": "Master input buffering and momentum cancellation to avoid hazard drift"
+            },
+            {
+              "label": "4",
+              "detail": "Unlock early milestone rewards to establish compounding progression output"
             }
           ]
         },
         {
           "order": 2,
-          "name": "Beginner Guide: How to Start & Serve Customers",
-          "description": "Step-by-step beginner guide covering customer ordering, food prep, station management, and cashier checkout mechanics.",
-          "href": "/guide/my-seafood-stand-beginner-guide",
-          "displayType": "feature-cards",
+          "name": "Scroll a Game Codes",
+          "description": "Active redemption codes, gift rewards, and promo bonuses released to help players accelerate early progression.",
+          "href": "/progression/scroll-a-game-rewards",
+          "displayType": "code-cards",
           "highlights": [
             {
-              "label": "Step 1",
-              "detail": "Take customer order at the stall front"
+              "label": "SCROLL2026",
+              "detail": "Redeem for free starter scrolls and currency bonus",
+              "badge": "Active"
             },
             {
-              "label": "Step 2",
-              "detail": "Cook seafood on the grill or boil station"
+              "label": "VELOCITY",
+              "detail": "Claim exclusive momentum boost and rare upgrade catalyst",
+              "badge": "Active"
             },
             {
-              "label": "Step 3",
-              "detail": "Serve warm food promptly for maximum customer tips"
+              "label": "MILESTONE",
+              "detail": "Unlock special cosmetic trail and extra reward tokens",
+              "badge": "Active"
             }
           ]
         },
         {
           "order": 3,
-          "name": "Seafood & Fish Tier List",
-          "description": "Complete breakdown of all catchable fish and seafood ranked by market value, customer demand, and profit margins.",
-          "href": "/seafood/my-seafood-stand-tier-list",
-          "displayType": "tier-grid",
+          "name": "Scroll a Game Updates",
+          "description": "Patch breakdown tracking balance changes, new progression mechanics, rebirth adjustments, and seasonal content.",
+          "href": "/community/scroll-a-game-update",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "S Tier",
-              "detail": "King Crab · Lobster Boil — Highest profit per customer"
+              "label": "Momentum",
+              "detail": "Overhauled velocity meter rewarding consistent scrolling rhythms over raw spamming"
             },
             {
-              "label": "A Tier",
-              "detail": "Salmon · Jumbo Shrimp · Tuna Steak — Reliable fast earners"
+              "label": "Rebirth",
+              "detail": "Smoothed milestone scaling and introduced tiered currency refund rewards"
             },
             {
-              "label": "B Tier",
-              "detail": "Clams · Oysters · Squid — Great mid-game margin"
-            },
-            {
-              "label": "C Tier",
-              "detail": "Common Sardines · Small Crab — Starter seafood"
+              "label": "Input QoL",
+              "detail": "Granular sensitivity sliders and scroll-wheel deadzone configuration settings"
             }
           ]
         },
         {
           "order": 4,
-          "name": "Best Upgrades Progression",
-          "description": "Optimal order to spend your cash: expand kitchen stations, hire waitstaff, speed up grills, and upgrade seating.",
-          "href": "/upgrades/my-seafood-stand-best-upgrades",
-          "displayType": "feature-cards",
+          "name": "Scroll a Game Gameplay Guide",
+          "description": "Deep mechanical breakdown of camera anchors, scrolling physics, platforming dynamics, and stage hazard management.",
+          "href": "/mechanics/scroll-a-game-mechanics",
+          "displayType": "tier-grid",
           "highlights": [
             {
-              "label": "Priority 1",
-              "detail": "Cooking Speed & Extra Burners — Clears customer backlog"
+              "label": "S",
+              "detail": "Camera Anchor Mastery — Control screen pacing to reveal hazards early"
             },
             {
-              "label": "Priority 2",
-              "detail": "Customer Seating Capacity — Increases simultaneous diners"
+              "label": "A",
+              "detail": "Buffer Jumps — Queue directional inputs during recovery frames seamlessly"
             },
             {
-              "label": "Priority 3",
-              "detail": "Auto-Chef / Waiter Staff — Passive hands-free revenue"
+              "label": "B",
+              "detail": "Tap Countering — Cancel residual inertia to stick narrow landings"
+            },
+            {
+              "label": "C",
+              "detail": "Edge Recovery — Emergency maneuvers when trailing screen borders approach"
             }
           ]
         },
         {
           "order": 5,
-          "name": "How to Get Cash Fast",
-          "description": "Top money-making strategies, VIP evaluation, tip maximization, and high-efficiency serving tips.",
-          "href": "/guide/my-seafood-stand-how-to-get-cash-fast",
-          "displayType": "feature-cards",
+          "name": "Scroll a Game Tips and Tricks",
+          "description": "Essential tactical advice, screen positioning techniques, and habit optimizations to push through difficult obstacles.",
+          "href": "/guide/scroll-a-game-tips",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Combo",
-              "detail": "Chain orders quickly to build the Customer Happiness multiplier"
+              "label": "Screen",
+              "detail": "Keep your avatar one-third ahead of the rear edge to maximize visual reaction time"
             },
             {
-              "label": "High Margin",
-              "detail": "Focus high-tier seafood boils during peak customer rush hours"
+              "label": "Hitbox",
+              "detail": "Focus dodging around the sprite torso rather than outer visual limbs"
             },
             {
-              "label": "Reinvest",
-              "detail": "Keep 20% cash reserve for fresh ingredient replenishment"
+              "label": "Pacing",
+              "detail": "Avoid frantic button spamming; maintain steady cadence to preserve momentum stacks"
             }
           ]
         },
         {
           "order": 6,
-          "name": "Plot Expansion & Stand Customization",
-          "description": "Unlock bigger land plots, arrange optimal cooking layouts, and add high-value decorative upgrades.",
-          "href": "/upgrades/my-seafood-stand-how-to-upgrade-plot",
-          "displayType": "feature-cards",
+          "name": "Scroll a Game Secrets",
+          "description": "Hidden milestones, reverse-scroll triggers, interactive environmental anomalies, and secret prestige multipliers.",
+          "href": "/progression/scroll-a-game-secrets",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "Plot 1",
-              "detail": "Starter Beach Stand (3 Tables, 1 Grill)"
+              "label": "1",
+              "detail": "Reach kinetic distance milestones to trigger hidden utility menus and rune cues"
             },
             {
-              "label": "Plot 2",
-              "detail": "Boardwalk Restaurant (6 Tables, 2 Grills, Boil Station)"
+              "label": "2",
+              "detail": "Perform reverse-scroll inputs at visual phase transitions to uncover secret flags"
             },
             {
-              "label": "Plot 3",
-              "detail": "Luxury Pier Seafood Pavilion (Full Automation & VIP Seating)"
+              "label": "3",
+              "detail": "Hold stationary positions against moving barriers for persistent cosmetic badges"
+            },
+            {
+              "label": "4",
+              "detail": "Unlock Threshold Zero prestige layer for compounding cross-reset multipliers"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "Scroll a Game Controls",
+          "description": "Complete reference for keyboard, mouse, and gamepad bindings to eliminate input latency and fine-tune response.",
+          "href": "/controls/scroll-a-game-controls",
+          "displayType": "code-cards",
+          "highlights": [
+            {
+              "label": "WASD / Space",
+              "detail": "Primary 4-directional navigation, elevation jumps, and vertical propulsion"
+            },
+            {
+              "label": "Shift / RMB",
+              "detail": "Horizontal dash burst for crossing gaps and hazardous boundary zones"
+            },
+            {
+              "label": "Left Click / F",
+              "detail": "Primary attack or environmental interaction trigger to clear paths"
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "Scroll a Game Community",
+          "description": "Join the official community Discord and player discussion channels for real-time announcements, patches, and guides.",
+          "href": "/community/scroll-a-game-discord",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Discord",
+              "detail": "Official server featuring real-time announcements, patch notes, and dev chats"
+            },
+            {
+              "label": "Strategy",
+              "detail": "Player-curated discussion boards for hardware layouts and optimal builds"
+            },
+            {
+              "label": "Events",
+              "detail": "Seasonal community challenges, leaderboard showcases, and contest updates"
             }
           ]
         }
@@ -300,27 +285,27 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Quick answers to the most common questions about My Seafood Stand.",
+      "description": "Quick answers to the most common questions about Scroll a Game.",
       "items": [
         {
-          "question": "What is My Seafood Stand?",
-          "answer": "My Seafood Stand is a free-to-play fighting RPG on Roblox based on the Bleach anime. You choose one of game mechanics Shinigami (Soul Reaper), Quincy, or Hollow each with unique progression, combat abilities, and evolution systems. The game features 130+ skills, a level 100 cap, boss fights, and deep build customization."
+          "question": "What is Scroll a Game?",
+          "answer": "Scroll a Game is a scrolling adventure title featuring dynamic camera mechanics, obstacle navigation, collectible scrolls, and deep progression trees. Players navigate hazardous stages, upgrade kinetic attributes, and unlock powerful gear synergies."
         },
         {
-          "question": "Which race should beginners pick?",
-          "answer": "Shinigami is the most straightforward starter race, while Hollow and Quincy offer more specialized progression routes. Compare their abilities before committing."
+          "question": "How do I get started as a beginner in Scroll a Game?",
+          "answer": "Start by checking the Scroll a Game beginner guide to understand screen positioning and core movement controls. Focus your early currency on base survival and collection radius upgrades before investing in high-end offensive multipliers."
         },
         {
-          "question": "What is the current level cap?",
-          "answer": "The current level cap is 100, with more than 130 skills available across trees and race progression systems."
+          "question": "How do scroll items and rarities work in Scroll a Game?",
+          "answer": "Scroll items in Scroll a Game span multiple rarity tiers from Common to Mythical. Equipping complementary scrolls enhances offensive damage, defensive barriers, and passive resource generation rates."
         },
         {
-          "question": "Where do I find active codes?",
-          "answer": "Use the Codes page for working codes, rewards, expiration notes, and redeem instructions."
+          "question": "Where can I find active codes and rewards for Scroll a Game?",
+          "answer": "Check our Scroll a Game rewards and community hubs for the latest active promo codes, milestone unlocks, and seasonal bonuses."
         },
         {
-          "question": "Are boss guides updated?",
-          "answer": "Boss pages are organized with spawn notes, attack patterns, strategies, drop tables, and related next steps for progression."
+          "question": "How can I optimize controls and reduce input latency in Scroll a Game?",
+          "answer": "Visit the Scroll a Game controls guide for recommended keyboard bindings, gamepad layouts, and mouse sensitivity settings tailored for smooth platforming precision."
         }
       ]
     },
