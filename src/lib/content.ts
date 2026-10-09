@@ -208,7 +208,7 @@ export async function getContent(contentType: string, slugSegments: string[], la
           slug: currentSlug,
           segments: slugSegments,
           contentType,
-          locale: routing.defaultLocale,
+          locale: routing.defaultLocale as Locale,
           metadata: metadata as ContentMetadata,
           MDXContent,
           headings: getHeadingsFromFile(enMdxPath),
