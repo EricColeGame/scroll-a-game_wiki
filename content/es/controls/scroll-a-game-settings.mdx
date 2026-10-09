@@ -1,0 +1,152 @@
+export const metadata = {
+  title: "La guía definitiva de ajustes para Scroll a Game: Optimiza los controles y la fluidez",
+  description: "Domina los ajustes de Scroll a Game con nuestra guía completa. Aprende la mejor sensibilidad del ratón, asignación de teclas, ajustes de pantalla y mejoras de rendimiento.",
+  category: "controls",
+  date: "2026-10-09",
+};
+
+La precisión en el movimiento marca la diferencia entre una partida casual y una puntuación récord, y dominar tus controles es la forma más rápida de escalar en la tabla de clasificación. Al entrar en acción, ajustar minuciosamente tus **scroll a game settings** (ajustes de Scroll a Game) garantiza que cada movimiento del ratón, pulsación de tecla y fotograma respondan con cero retraso perceptible. Sin modificar tus **scroll a game settings** predeterminados, te arriesgas a tirones repentinos de cámara, fallos en las transiciones entre obstáculos y un ritmo de entrada inconsistente que puede arruinar una partida perfecta.
+
+Ya sea que utilices la rueda de un ratón óptico de alta precisión, una palanca analógica o asignaciones de teclado personalizadas, tomar el control manual de tu configuración te brinda una ventaja competitiva tangible. Desde calibrar la tasa de registro de entradas hasta fijar una nitidez visual de alta tasa de refresco, aquí tienes todo lo que necesitas saber para optimizar tu experiencia.
+
+---
+
+## Configuraciones esenciales de entrada y sensibilidad
+
+La mecánica principal de cualquier título de desplazamiento gira en torno a un desplazamiento rápido y predecible. En las configuraciones predeterminadas, la mayoría de los sistemas operativos y motores de juego traducen una sola muesca de la rueda de desplazamiento en tres líneas estándar de movimiento. Aunque esto funciona bien para leer documentos, introduce un ritmo entrecortado y picos de velocidad impredecibles durante el juego.
+
+Al ajustar tus **scroll a game settings**, la primera prioridad es aislar la sensibilidad del desplazamiento vertical de los valores predeterminados de Windows o del navegador. Si el título ofrece un modo de entrada de hardware directo, habilitar la entrada sin procesar (raw input) omite por completo la aceleración y balística del puntero del sistema operativo, garantizando que cada muesca física se traduzca en una distancia fija o un multiplicador de velocidad constante.
+
+### Ajuste fino de la sensibilidad por pasos de desplazamiento
+
+Según el hardware de tu ratón, las ruedas de desplazamiento mecánicas cuentan con muescas táctiles pronunciadas (detenciones) o con ruedas magnéticas de giro libre. Los jugadores competitivos suelen preferir muescas bien definidas porque ofrecen confirmación sensorial de cada comando introducido.
+
+```
+Clic táctil de la rueda -> Búfer de entrada sin procesar -> Incremento de distancia fijo -> Velocidad de personaje estable
+```
+
+Si el menú de controles ofrece una opción de aceleración, desactívala. La aceleración altera la velocidad de movimiento según la fuerza o rapidez con la que gires la rueda, destruyendo la memoria muscular. En su lugar, selecciona un multiplicador lineal estático.
+
+La siguiente tabla detalla los perfiles de control recomendados según los objetivos habituales de los jugadores y el tipo de hardware:
+
+| Perfil de control | Multiplicador de sensibilidad | Suavizado (Smoothing) | Hardware recomendado | Estilo de juego ideal |
+| :--- | :--- | :--- | :--- | :--- |
+| **Precisión estática** | 1.0x – 1.25x | Desactivado | Rueda táctil con muescas (24 pasos) | Esquivar obstáculos técnicos |
+| **Corredor de alta velocidad** | 1.75x – 2.5x | Activado (Bajo) | Rueda óptica con muescas | Speedrunning de ritmo rápido |
+| **Inercia de giro libre** | 0.8x (Amortiguado) | Activado (Medio) | Rueda de giro infinito/sin fricción | Recorrido continuo y resistencia |
+| **Híbrido asistido por teclas** | 1.0x (Fijo) | Desactivado | Ratón con muescas + Barra espaciadora mecánica | Ritmo mixto y plataformas |
+
+La experiencia de los jugadores compartida en foros indica que mantener el suavizado desactivado genera la latencia percibida más baja, incluso si el movimiento visual parece un poco más brusco entre cada clic de la rueda.
+
+---
+
+## Ajustes de pantalla y tasa de fotogramas para un desplazamiento fluido
+
+La claridad visual determina directamente tu tiempo de reacción. Cuando un entorno se desplaza rápidamente por la pantalla, cualquier microtirón (micro-stutter) o desincronización en la tasa de fotogramas convierte los elementos de fondo en un borrón difuso. Modificar tu configuración gráfica dentro del menú de **scroll a game settings** mantiene el campo de juego legible incluso a velocidades extremas.
+
+Para lograr un movimiento sin desgarro de pantalla (tearing) y sin introducir el pronunciado retraso de entrada asociado al V-Sync tradicional de doble búfer, considera emparejar una pantalla con frecuencia de actualización variable (como G-Sync o FreeSync) con un límite de tasa de fotogramas en el juego situado ligeramente por debajo de la frecuencia máxima de tu monitor. Puedes consultar pruebas de rendimiento detalladas en la [guía de PCGamingWiki sobre input lag y frame pacing](https://www.pcgamingwiki.com/) para ver cómo la sincronización de pantalla influye en los títulos de acción rápida.
+
+### Desglose de frecuencia de actualización y claridad de movimiento
+
+| Ajuste de vídeo | Opción recomendada | Impacto en rendimiento | Impacto en latencia | Beneficio en el juego |
+| :--- | :--- | :--- | :--- | :--- |
+| **Modo de pantalla** | Pantalla completa exclusiva | Bajo | Mínimo | Omite los retrasos del compositor de ventanas del escritorio |
+| **Limitador de fotogramas** | Hz de pantalla menos 3 FPS | Bajo | Bajo | Evita la acumulación en el búfer a la vez que previene el tearing |
+| **Sincronización vertical (V-Sync)** | Desactivado (usar VRR/FastSync) | Ninguno | Alto si está activado | Elimina el tearing sin la penalización de 16–30 ms de retraso de entrada |
+| **Desenfoque de movimiento (Motion Blur)** | Desactivado | Bajo | Ninguno | Mantiene los peligros y marcadores en movimiento completamente nítidos |
+| **Escala de resolución** | 100% nativa | Medio a Alto | Mínimo | Evita artefactos de escalado durante transiciones a alta velocidad |
+| **Efectos de posprocesamiento** | Bajo o Desactivado | Bajo | Mínimo | Elimina la aberración cromática y las distorsiones en pantalla |
+
+Desactivar el desenfoque de movimiento es una recomendación universal. Aunque el motion blur puede hacer que un título de consola a 30 FPS parezca cinematográfico, en un juego de habilidad y desplazamiento oscurece indicadores de tiempo cruciales y los bordes de las próximas plataformas.
+
+---
+
+## Asignación de teclas personalizada y esquemas de control alternativos
+
+Aunque la rueda de desplazamiento es la interfaz más intuitiva, girarla de forma continua puede provocar fatiga rápidamente en los dedos durante sesiones de juego prolongadas. Los títulos modernos suelen permitir la asignación de teclas secundarias, lo que te permite repartir el esfuerzo físico entre toda la mano o cambiar a un mando analógico.
+
+### Mapeo de teclas de movimiento secundarias
+
+Una configuración de control muy eficaz consiste en combinar las entradas principales de la rueda del ratón con pulsaciones en un teclado mecánico. Si tu desplazamiento principal hacia abajo genera impulso hacia adelante, asignar un comando alternativo a la barra espaciadora o a un botón lateral para el pulgar (Ratón 4 / Ratón 5) te proporciona una forma cómoda de mantener el ritmo en trayectos largos y rectos.
+
+La siguiente tabla detalla las estrategias de reasignación de teclas más eficaces reportadas por las comunidades competitivas:
+
+| Arquetipo de configuración | Entrada principal | Entrada secundaria / Impulso | Entrada de freno / Marcha atrás | Calificación ergonómica |
+| :--- | :--- | :--- | :--- | :--- |
+| **Rueda de ratón por defecto** | Desplazar hacia abajo | Desplazar hacia arriba | Clic central del ratón | Moderada (propensa a la fatiga) |
+| **División a dos manos** | Desplazar hacia abajo | Barra espaciadora (pulgar) | Shift izquierdo (meñique) | Alta (carga de trabajo equilibrada) |
+| **WASD puro de teclado** | W / Flecha arriba | S / Flecha abajo | Barra espaciadora | Alta (memoria muscular estándar) |
+| **Mando analógico** | Gatillo derecho (RT) | Botón frontal izquierdo (LB) | Gatillo izquierdo (LT) | Muy alta (agarre relajado) |
+| **Bimanual Ratón/Teclado numérico** | Desplazar hacia abajo | Teclado numérico 0 | Teclado numérico Enter | Alta (ideal para configuraciones zurdas) |
+
+Los informes de la comunidad sugieren que alternar entre los clics de la rueda y las pulsaciones de teclado ayuda a eliminar los riesgos de LER (lesión por esfuerzo repetitivo), al tiempo que ofrece una consistencia superior durante secuencias rápidas de acciones.
+
+---
+
+## Ajustes de accesibilidad y de interfaz
+
+Una dimensión a menudo pasada por alto al optimizar tus **scroll a game settings** es adaptar la interfaz gráfica de usuario (GUI) y las opciones de accesibilidad visual. Cuando los objetos se desplazan por la pantalla a gran velocidad, los elementos innecesarios en la interfaz desvían la vista de las trayectorias críticas.
+
+### Optimización de las pistas visuales
+
+La mayoría de los juegos ofrecen opciones para personalizar la visualización frontal (HUD), ajustar la opacidad de la retícula y activar o desactivar comportamientos dinámicos como la sacudida de la cámara (camera shake). En entornos de desplazamiento rápido, una sacudida excesiva de la cámara puede provocar desorientación visual y desalinear el cursor.
+
+| Elemento de interfaz | Estado predeterminado | Ajuste competitivo | Justificación |
+| :--- | :--- | :--- | :--- |
+| **Sacudida de cámara / pantalla** | Activado (100%) | Desactivado (0%) | Mantiene los horizontes estables durante impactos o aceleraciones |
+| **Escalado del HUD** | 100% | 75% – 85% | Despeja la periferia para detectar antes los peligros que se aproximan |
+| **Modo de alto contraste** | Desactivado | Activado | Diferencia las hitboxes dinámicas de los fondos decorativos |
+| **Visualización del velocímetro** | Centrado | Anclado a una esquina | Evita que datos visuales vitales tapen a tu personaje |
+| **Indicador de progreso de desplazamiento** | Barra con animaciones | Porcentaje numérico minimalista | Reduce el ruido visual y la carga en la sincronización de fotogramas |
+
+Modificar estos parámetros mejora directamente la claridad. Reducir la escala general del HUD amplía tu visión periférica, brindándote milisegundos valiosos para identificar los obstáculos que se aproximan.
+
+---
+
+## Solución de problemas de retraso de entrada y tirones
+
+Nada arruina un intento de récord con tanta rapidez como las entradas que no se registran o las caídas bruscas de fotogramas. Si tu movimiento responde de manera inconsistente, el problema rara vez se debe a tus reflejos físicos; casi siempre proviene de conflictos entre capas de software o un sondeo en segundo plano desincronizado.
+
+### Resolución de conflictos de hardware y software
+
+Si sientes que la rueda responde con lentitud o parece saltarse uno de cada cuatro clics, comprueba la configuración del software de tu periférico. Los ratones gaming modernos suelen admitir tasas de sondeo (polling rates) de hasta 1000 Hz, 4000 Hz o incluso 8000 Hz. Aunque las tasas de sondeo elevadas minimizan la latencia del sensor, ciertos motores de juego tienen dificultades para procesar los eventos de la rueda transmitidos a frecuencias tan extremas, lo que provoca cuellos de botella en la CPU o caídas de fotogramas.
+
+Utiliza la siguiente matriz de resolución de problemas para identificar y corregir las interrupciones más habituales en el juego:
+
+| Síntoma del problema | Causa probable | Paso de diagnóstico recomendado | Solución |
+| :--- | :--- | :--- | :--- |
+| **Pulsaciones de rueda omitidas** | Sobrecarga de la tasa de sondeo o sensor sucio | Probar la rueda en el Bloc de notas de Windows; revisar el concentrador USB | Reducir la tasa de sondeo a 1000 Hz; limpiar el codificador óptico |
+| **Microtirones repentinos** | Caídas de fotogramas en segundo plano o desajuste de V-Sync | Ejecutar una superposición de rendimiento en tiempo real (RivaTuner) | Limitar la tasa de fotogramas dentro de los **scroll a game settings** |
+| **Efecto rebote (Rubber-banding)** | Conflicto con el motor de desplazamiento suave | Inspeccionar las opciones de entrada del juego | Desactivar la interpolación de movimiento integrada / desplazamiento suave |
+| **Retraso de entrada elevado** | Búfer de ventanas de escritorio / Pantalla completa sin bordes | Comprobar la configuración de gráficos de pantalla de Windows | Cambiar el juego a Pantalla completa exclusiva; activar el modo de baja latencia |
+| **Dirección errática de la rueda** | Codificador rotatorio mecánico desgastado | Inspeccionar el rebote en dirección opuesta al girar despacio | Aumentar el tiempo de rebote (debounce time) en el software del ratón o cambiar el codificador |
+
+La experiencia de los jugadores demuestra que reducir la tasa de sondeo del ratón de 4000 Hz u 8000 Hz a unos estables 1000 Hz a menudo soluciona microtirones inexplicables durante secuencias de desplazamiento intensas sin introducir un retraso de seguimiento perceptible.
+
+---
+
+## Buenas prácticas para probar y calibrar tu configuración
+
+Antes de poner a prueba tus nuevos controles en partidas competitivas de alto nivel, establece una rutina de calentamiento estructurada para comprobar tu calibración. Los cambios repentinos en la sensibilidad o en las teclas asignadas requieren tiempo de adaptación neuromuscular.
+
+1. **Ejercicio de calibración por pasos**: Entra en una zona de práctica vacía o en un nivel inicial. Gira la rueda de desplazamiento exactamente tres clics distintos y observa la distancia recorrida. Comprueba que el personaje o el cursor llegue a la marca visual exacta en cada ocasión sin desviarse.
+2. **Prueba de estrés de velocidad límite**: Gira la rueda lo más rápido posible durante cinco segundos continuos. Revisa el gráfico de tiempos de fotograma (frame-time) para asegurarte de que no ocurran caídas de fotogramas durante ráfagas intensas de entradas.
+3. **Reacción de frenado de emergencia**: Acelera a la velocidad máxima y practica la transición instantánea a la tecla secundaria de freno. Mide si la distancia de frenado se mantiene uniforme a lo largo de varios intentos.
+
+Dedicar diez minutos a revisar tu configuración después de cualquier parche o actualización de controladores garantiza que la interfaz de control pase totalmente desapercibida, permitiendo que tu habilidad pura y tu precisión temporal sean las verdaderas protagonistas.
+
+---
+
+## Preguntas frecuentes
+
+### ¿Cuáles son los mejores scroll a game settings para jugadores competitivos?
+La mejor configuración prioriza la entrada directa sin aceleración y la máxima nitidez de movimiento. Los jugadores competitivos suelen utilizar un multiplicador estático de sensibilidad de desplazamiento de 1.0x a 1.25x, desactivar toda aceleración y suavizado del ratón, bloquear la tasa de fotogramas justo por debajo de la frecuencia de refresco del monitor con G-Sync/FreeSync activado, y asignar un botón secundario del teclado (como la barra espaciadora) para un movimiento sostenido libre de fatiga.
+
+### ¿Debo activar o desactivar el desplazamiento suave en los ajustes?
+En prácticamente todos los contextos de juego, el desplazamiento suave (smooth scrolling) debe desactivarse. Aunque el suavizado crea movimientos de cámara visualmente fluidos en los navegadores web, en un juego añade un retraso de interpolación artificial entre la acción física y el movimiento del personaje. Desactivarlo garantiza una respuesta directa de 1 a 1.
+
+### ¿Por qué mi rueda de desplazamiento omite acciones al jugar?
+Las acciones omitidas suelen ocurrir cuando la tasa de sondeo del ratón está configurada demasiado alta (lo que satura los hilos de la CPU), cuando hay suciedad obstruyendo el sensor óptico de la rueda o cuando la aceleración de desplazamiento del sistema operativo entra en conflicto con los controles del juego. Reduce la tasa de sondeo del ratón a 1000 Hz y asegúrate de activar la entrada directa (raw input) en los ajustes del juego.
+
+### ¿Puedo usar un mando en lugar de la rueda del ratón?
+Sí, la mayoría de los títulos admiten la reasignación de mandos. Si girar la rueda de forma continua te produce fatiga en la mano, puedes asignar el desplazamiento direccional a los gatillos analógicos o al stick derecho. Los gatillos analógicos permiten un control gradual de la aceleración, ofreciendo una alternativa ergonómica para sesiones de juego prolongadas.

@@ -6,7 +6,15 @@
     "description": "Complete Scroll A Game Wiki with detailed guides, gameplay tips, item information, progression strategies, and updates to help players master the adventure.",
     "legalNotice": "Non-official fan wiki. Made by players, for players."
   },
-  "nav": {},
+  "nav": {
+    "guide": "Guide",
+    "mechanics": "Mechanics",
+    "controls": "Controls",
+    "progression": "Progression",
+    "items": "Items",
+    "community": "Community",
+    "characters": "Characters"
+  },
   "home": {
     "meta": {
       "title": "Scroll a Game Wiki — Guides, Items, Upgrades & Codes",
@@ -344,12 +352,39 @@
     "playGame": "Play Scroll A Game",
     "officialDiscord": "Official Discord",
     "officialYoutube": "Official YouTube",
-    "vvBuilder": "Skill Planner",
     "beginnerGuide": "Beginner Guide",
-    "raceGuides": "Race Guides",
-    "bossGuides": "Boss Guides",
-    "buildGuide": "Build Guide",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service"
+    "termsOfService": "Terms of Service",
+    "mechanicsGuides": "Mechanics Guides",
+    "controlsGuides": "Controls Guides",
+    "progressionGuides": "Progression Guides"
+  },
+  "guide": {
+    "overviewTitle": "Scroll a Game Guide",
+    "overviewDescription": "Comprehensive beginner walkthroughs, gameplay fundamentals, and essential strategies to master Scroll a Game."
+  },
+  "mechanics": {
+    "overviewTitle": "Scroll a Game Mechanics",
+    "overviewDescription": "In-depth breakdown of scrolling physics, scroll speed scaling, stage hazards, and core system rules."
+  },
+  "controls": {
+    "overviewTitle": "Scroll a Game Controls",
+    "overviewDescription": "Complete keyboard, mouse, and mobile control schemes, input configurations, and recommended settings."
+  },
+  "progression": {
+    "overviewTitle": "Scroll a Game Progression",
+    "overviewDescription": "Quest objectives, unlock milestones, secret discovery tips, and milestone reward progression."
+  },
+  "items": {
+    "overviewTitle": "Scroll a Game Items",
+    "overviewDescription": "Catalog of ancient scrolls, weapons, utility consumables, and kinetic upgrade tiers."
+  },
+  "community": {
+    "overviewTitle": "Scroll a Game Community",
+    "overviewDescription": "Official update logs, community Discord servers, subreddit discussions, and release details."
+  },
+  "characters": {
+    "overviewTitle": "Scroll a Game Characters",
+    "overviewDescription": "Playable character stats, cosmetic skins, enemy profiles, and stage boss encounter tactics."
   }
 }

@@ -1,0 +1,129 @@
+export const metadata = {
+  title: "Cómo hacer scroll en un juego: Guía completa de cámara 2D y viewport",
+  description: "Domina el movimiento de cámara 2D y la lógica de viewport con este tutorial para hacer scroll en un juego, incluyendo parallax, tilemaps y seguimiento fluido.",
+  category: "guide",
+  date: "2026-10-09",
+};
+
+Mover una cámara dinámica a través de un mundo digital expansivo es uno de los hitos más críticos en la programación de videojuegos. Ya sea que estés creando un endless runner, un Metroidvania extenso o un RPG retro con vista cenital (top-down), comprender cómo implementar el desplazamiento o scroll en un juego proporciona la base arquitectónica necesaria para dar vida a escenas estáticas. Sin una gestión adecuada de la cámara, los jugadores se sienten desconectados del movimiento del personaje y experimentan desorientación visual. En este detallado tutorial para hacer scroll en un juego, descubrirás las matemáticas subyacentes, las transformaciones de viewport y las optimizaciones de renderizado necesarias para crear experiencias de desplazamiento increíblemente fluidas en cualquier motor o framework de desarrollo moderno.
+
+## Arquitectura fundamental: Comprensión de viewports y coordenadas del mundo
+
+En esencia, hacer scroll en un juego no suele implicar mover individualmente cada objeto de tu mundo virtual. En su lugar, el motor del juego manipula una cámara virtual o desplaza el lienzo (canvas) del viewport en relación con las coordenadas globales. Cuando un jugador presiona una tecla de movimiento, el personaje actualiza su posición dentro de un espacio de coordenadas global, mientras que la cámara calcula cómo transformar esa posición del mundo en el monitor físico del jugador.
+
+Comprender los sistemas de coordenadas es vital antes de escribir cualquier código de transformación. Los pipelines de renderizado modernos separan las coordenadas físicas del dispositivo de los cálculos internos del juego.
+
+| Espacio de coordenadas | Punto de referencia (Origen) | Uso típico en juegos 2D | Unidad de medida |
+| :--- | :--- | :--- | :--- |
+| **Espacio del mundo (World Space)** | Anclaje global fijo (0,0) | Posicionamiento del terreno del nivel, enemigos y objetos interactivos | Unidades del motor o píxeles del mundo |
+| **Espacio de pantalla (Screen Space)** | Esquina superior izquierda o centro de la pantalla | Interfaces de usuario (UI) fijas, elementos HUD, minimapas | Píxeles físicos de pantalla |
+| **Espacio del viewport (Viewport Space)** | Bounding box dinámica de la cámara | Cálculo de qué elementos caen dentro de la vista actual del jugador | Normalizado (0.0 a 1.0) o unidades de cámara |
+| **Espacio de tiles (Tile Space)** | Índice de celda de la cuadrícula [X, Y] | Carga de chunks, mapas de colisión, grafos de pathfinding | Índice de celda / enteros |
+
+Al construir un sistema de cámara, tu motor resta las coordenadas del mundo de la cámara a las coordenadas del mundo de cada entidad activa durante el pase de renderizado (draw pass). Si un enemigo se encuentra en la posición del mundo (800, 300) y la cámara está centrada en (600, 300), el enemigo se renderiza con respecto al centro de la pantalla con un desplazamiento de +200 píxeles en el eje horizontal.
+
+Los desarrolladores que construyen bucles de renderizado personalizados a menudo aprovechan transformaciones matriciales para automatizar este paso. Para los desarrolladores de canvas de bajo nivel, guías oficiales como la [MDN Web Docs Canvas API Guide](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) ilustran cómo los métodos de traslación global y multiplicación de matrices simplifican el desplazamiento de un fotograma completo en una sola llamada de dibujo.
+
+## Mecánicas populares de scroll explicadas
+
+Diferentes géneros demandan comportamientos de cámara únicos. Forzar un seguimiento rígido de la cámara en un juego de plataformas de alta velocidad puede inducir mareos por movimiento, mientras que cámaras demasiado holgadas en juegos de puzles de precisión hacen que los saltos se sientan impredecibles. Explorar los principales modelos de desplazamiento ayuda a determinar la sensación adecuada para tu proyecto.
+
+| Estilo de scroll | Comportamiento de la cámara | Géneros más adecuados | Perfil de rendimiento |
+| :--- | :--- | :--- | :--- |
+| **Bloqueo rígido (Hard Follow)** | El centro de la cámara equivale estrictamente a la posición del jugador | Prototipos minimalistas, shooters arcade | Sobrecarga de CPU muy baja |
+| **Zona muerta (Deadzone / Camera Window)** | La cámara permanece inmóvil hasta que el jugador toca los límites del cuadro | Plataformas 2D clásicos, beat 'em ups de acción | Extremadamente eficiente, predecible |
+| **Amortiguación suave (Lerp)** | La cámara se desliza detrás del jugador con una desaceleración continua | Plataformas modernos, action RPGs | Bajo uso de CPU, requiere escalado por delta time |
+| **Auto-scroll forzado** | El viewport se mueve a velocidad constante a lo largo de un vector | Shmups, scrollers verticales, endless runners | Culling de memoria predecible |
+| **Parallax multiplano** | Múltiples capas de fondo se desplazan a velocidades fraccionarias | Juegos 2.5D, side-scrollers cinematográficos | Mayor exigencia de tasa de relleno (fill-rate) de GPU |
+
+En un juego de plataformas estándar, las zonas muertas (deadzones) ofrecen descanso visual. La zona muerta crea un cuadro delimitador invisible cerca del centro de la pantalla. Mientras el jugador corre, salta o gira dentro de este pequeño rectángulo, la cámara permanece estacionaria. Solo cuando el personaje empuja contra uno de los bordes de la zona muerta, la cámara comienza a trasladarse. Esto evita que los ajustes pequeños y espasmódicos del jugador sacudan toda la pantalla.
+
+Por el contrario, los auto-scrollers verticales requieren un parámetro de velocidad independiente. En lugar de seguir directamente la entrada del jugador, la cámara se incrementa a lo largo de un eje a una velocidad fija por segundo. Si el personaje se queda rezagado respecto al borde del viewport que avanza, las condiciones de activación gestionan la destrucción o el daño del personaje.
+
+## Implementación paso a paso: Creación de un sistema de seguimiento suave de cámara
+
+Escribir un sistema de cámara requiere una clara separación de responsabilidades. Un error común entre principiantes al seguir un tutorial para hacer scroll en un juego es vincular directamente el movimiento de la cámara a la entrada del teclado en lugar de rastrear la transformación real en el mundo de la entidad del jugador.
+
+### Paso 1: Definir el objetivo y los límites del viewport
+
+Primero, define el objeto de la cámara con coordenadas de posición, dimensiones del viewport y objetivos de referencia. La cámara necesita almacenar su coordenada actual junto con el objetivo al que pretende seguir.
+
+### Paso 2: Implementar interpolación lineal (Lerp)
+
+La interpolación lineal suaviza las paradas y arranques bruscos. En lugar de teletransportar la cámara instantáneamente a las coordenadas actuales del objetivo, mueves la cámara una pequeña fracción de la distancia restante en cada actualización de fotograma.
+
+La fórmula matemática es directa:
+`NuevaPosición = PosiciónActual + (PosiciónObjetivo - PosiciónActual) * FactorSuavizado * DeltaTime`
+
+| Valor del factor de suavizado | Respuesta visual | Sensación para el jugador | Caso de uso recomendado |
+| :--- | :--- | :--- | :--- |
+| **0.01 – 0.04** | Fuerte latencia, desplazamiento lento | Sensación flotante y holgada | Submarinos, vuelo espacial, vehículos derrapando |
+| **0.05 – 0.12** | Elasticidad equilibrada, seguimiento limpio | Receptivo pero natural | Plataformas estándar, títulos de aventura |
+| **0.15 – 0.30** | Seguimiento ajustado, retraso mínimo | Dinámico, altamente reactivo | Juegos de lucha rápidos, juegos de arena de precisión |
+| **1.0 (Instantáneo)** | Cero suavizado, fijación inmediata | Rígido, mecánicamente bloqueado | Recreaciones retro pixel-art, shooters de pantalla fija |
+
+### Paso 3: Limitar a los bordes del mundo (Clamp)
+
+Los niveles tienen límites. Si una cámara sigue al jugador hasta la esquina extrema izquierda de un nivel, corre el riesgo de mostrar bordes negros o un vacío sin contenido fuera del mapa. La limitación (clamping) restringe las coordenadas de la cámara entre límites mínimos y máximos definidos por los límites del nivel menos la mitad del tamaño del viewport.
+
+Implementar clamping en el flujo de trabajo de tu tutorial de scroll garantiza que la cámara se detenga suavemente en los bordes del mapa mientras el personaje del jugador continúa corriendo directamente hacia el borde de la pantalla.
+
+## Creación de profundidad con scroll parallax multicapa
+
+El scroll parallax es una ilusión óptica en la que los elementos del fondo se mueven más lentamente que los elementos del primer plano, simulando la perspectiva del mundo real y la profundidad ambiental. En las primeras consolas de 16 bits, los fondos por hardware lograban esto mediante planos de fondo dedicados. En los motores modernos, el parallax se logra asignando una relación de factor de scroll a cada capa.
+
+| Tipo de capa | Ilusión de distancia | Factor de velocidad de scroll típico | Ejemplos de recursos |
+| :--- | :--- | :--- | :--- |
+| **Cielo distante / Celestial** | Distancia infinita | 0.00 a 0.05 | Sol distante, luna, estrellas, degradado del horizonte |
+| **Montañas lejanas** | A kilómetros de distancia | 0.10 a 0.25 | Cordilleras, siluetas, nubes |
+| **Vegetación de plano medio** | A cientos de metros | 0.40 a 0.60 | Edificios lejanos, línea de árboles, colinas |
+| **Plano de juego (Playfield)** | Plano interactivo directo | 1.00 (Velocidad estándar) | Tiles de suelo, plataformas, enemigos, jugador |
+| **Capas superpuestas de primer plano** | Más cerca de la lente | 1.20 a 1.50 | Lianas colgantes, farolas, partículas climáticas |
+
+Al aplicar la lógica de parallax, calcula el desplazamiento de dibujo de cada capa en función de la posición de la cámara principal:
+`DesplazamientoCapa = PosiciónCámara * FactorScrollCapa`
+
+Si la cámara principal se mueve 100 píxeles a la derecha, una capa de montañas lejanas con un factor de scroll de 0.20 solo se desplaza 20 píxeles. Esto le da al jugador una impresión inmediata de escala masiva y horizontes distantes.
+
+## Optimización del rendimiento y errores comunes
+
+Incluso los scripts de cámara bien estructurados pueden sufrir fallos visuales si se descuidan los ciclos de vida del renderizado. Los reportes de experiencia de los jugadores suelen señalar temblores (jittering), screen tearing y microtirones durante el desplazamiento horizontal a alta velocidad.
+
+| Problema | Causa raíz | Solución arquitectónica |
+| :--- | :--- | :--- |
+| **Microtemblores (Micro-Jittering)** | La cámara se actualiza en Update() mientras el jugador se actualiza en FixedUpdate() | Actualizar la cámara exclusivamente en `LateUpdate` o tras la resolución de físicas |
+| **Sangrado de subpíxeles (Subpixel Bleeding)** | El viewport aterriza en valores fraccionarios de píxeles (p. ej., X = 124.73px) | Redondear las coordenadas de renderizado finales al entero más cercano en juegos pixel-art |
+| **Caídas de FPS** | Renderizado continuo de recursos del nivel fuera de pantalla | Implementar view frustum culling para omitir el dibujado de tiles fuera de pantalla |
+| **Costuras entre tiles (Seams)** | El filtrado de texturas sangra hacia los tiles adyacentes del atlas | Ajustar modos de textura wrap a clamp y habilitar alineación pixel-perfect de cámara |
+| **Screen Tearing** | Tasa de refresco de la pantalla desincronizada del bucle de renderizado | Habilitar V-Sync o cadenas de intercambio en modo ventana sin bordes |
+
+El orden de ejecución de la cámara importa enormemente. Si tu motor de físicas actualiza el movimiento del jugador dentro de un bucle de tick fijo, pero tu script de cámara se ejecuta dentro de un bucle de renderizado variable, la cámara interpolará de forma inconsistente entre posiciones obsoletas y nuevas. Posiciona siempre tus transformaciones de cámara en la etapa final de actualización (comúnmente conocida como `LateUpdate` en los sistemas de componentes modernos) después de que hayan finalizado todos los cálculos del jugador y de físicas.
+
+Además, el frustum culling proporciona mejoras masivas de rendimiento en juegos basados en tiles. En lugar de enviar miles de tiles del mapa al pipeline gráfico, calcula las coordenadas de tiles activas que intersecan con el rectángulo delimitador de la cámara. Itera únicamente a través de las filas y columnas visibles durante el pase de dibujo.
+
+## Lista de verificación paso a paso para implementar tu cámara
+
+Al integrar los principios descritos en este tutorial para hacer scroll en un juego, sigue esta lista de verificación estructural para mantener tu base de código mantenible y robusta:
+
+1. **Inicializar los límites de la cámara**: Calcula las dimensiones máximas en X e Y de la cuadrícula de tu nivel o recursos de fondo.
+2. **Asignar el objetivo de enfoque**: Almacena una referencia al personaje o vehículo controlable activo.
+3. **Configurar los márgenes del viewport**: Establece márgenes de zona muerta y compensaciones direccionales de anticipación (look-ahead) para dar visión hacia adelante a los jugadores.
+4. **Implementar amortiguación escalada por tiempo**: Asegúrate de que las variables de suavizado se multipliquen por el delta time del fotograma para evitar anomalías físicas en monitores de alta tasa de refresco.
+5. **Agregar canales de sacudida de pantalla (Screen Shake)**: Desacopla las compensaciones de posición de la cámara de la lógica de seguimiento principal para que los temblores por explosiones no distorsionen permanentemente las coordenadas del mundo.
+6. **Aplicar Frustum Culling**: Verifica que la geometría y los sprites de fondo fuera de pantalla dejen de renderizarse cuando estén fuera de los límites de visión.
+
+Al adherirte a este flujo modular, garantizas que tu cámara siga siendo escalable a medida que el diseño de tus niveles crezca en complejidad.
+
+## Preguntas frecuentes
+
+### ¿Por qué tiembla mi personaje cuando sigo un tutorial para hacer scroll en un juego?
+El temblor del personaje suele ocurrir debido a una discrepancia en el orden de actualización. Si el movimiento del jugador se calcula en un bucle de físicas fijo mientras que los cálculos de la cámara se ejecutan en una actualización de fotograma estándar, la cámara captura al jugador entre pasos de física. Mover el código de la cámara a una fase de actualización posterior a las físicas (como `LateUpdate`) resuelve el problema al instante.
+
+### ¿Cómo evito que la cámara muestre espacio vacío fuera de mi mapa?
+Utiliza la limitación de coordenadas (clamping). Calcula la posición válida mínima de la cámara (la mitad del ancho y alto del viewport) y la posición máxima (ancho y alto totales del mapa menos la mitad de las dimensiones del viewport). Restringe las coordenadas de tu cámara dentro de estos límites antes de pasarlas al renderizador.
+
+### ¿Puedo implementar scroll parallax sin múltiples cámaras de juego?
+Sí. El scroll parallax no requiere múltiples objetos de cámara físicos. Puedes lograr parallax dentro de un único pase de cámara multiplicando el desplazamiento de traslación de la cámara por un valor escalar fraccionario (como 0.2 para capas distantes o 0.6 para capas intermedias) al renderizar los sprites de fondo.
+
+### ¿Qué es la anticipación de cámara (look-ahead) y debería usarla?
+La anticipación de cámara o look-ahead desplaza ligeramente la cámara en la dirección en la que el jugador se mueve o mira. Esto otorga al jugador una mejor visibilidad hacia adelante para reaccionar ante peligros inminentes, enemigos y huecos entre plataformas, logrando que los juegos de plataformas rápidos y los juegos de carreras se sientan significativamente más fluidos y justos.
